@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	/*text-align: center;
+	color: white;*/
+	/*background-color: black;*/
+/*	background-image: url("../images/HogwartsExpress3.");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;*/
+}
+.jumbotron {
+	text-align: center;
+	color: white;
+	background-image: url("../images/HogwartsExpress2.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.jumbotron > h1 {
+	padding-top: 250px;
+}
