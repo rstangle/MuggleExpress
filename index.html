@@ -21,6 +21,9 @@
 
 	<!-- Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Milonga|PT+Serif|Stint+Ultra+Condensed" rel="stylesheet">
 	
 	<!-- My Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -33,77 +36,94 @@
 		  <p>The Complete Muggle's Guide to the Hogwarts Express</p>
 		 </div> -->
 	<div class="container">
-		<div class="jumbotron">
-		  <h1>MUGGLE EXPRESS</h1>
-		  <p>The Complete Muggle's Guide to the Hogwarts Express</p>
-		 </div>
+		<div class="row">
+			<div class="col-md-1"></div>
+
+			<div class="col-md-10">
+				<div class="jumbotron">
+				  <h1>MUGGLE EXPRESS</h1>
+				  <p>A Muggle's Guide to the Hogwarts Express</p>
+				 </div>
+			
+				<div class="panel panel-info">
+				  <!-- Default panel contents -->
+				  <div class="panel-heading">
+					<h3 class="panel-title">Current Train Schedule</h3>
+				  </div>
+				  <!-- Table -->
+				  <table class="table table-striped">
+				    <thead>
+				      <tr>
+				        <th>Train Name</th>
+				        <th>Destination</th>
+				        <th>First Departs At</th>
+				        <th>Frequency</th>
+				        <th>Next Arrival</th>
+				        <th>Arrival In... <!-- <br><span style="font-size: 10px; color: grey;"><i>(Muggle Minutes)</i></span> --></th>
+				      </tr>
+				    </thead>
+
+				     <tbody id="entries">
+			<!-- 		    <tr>
+					        <td>...</td>
+					        <td>...</td>
+					        <td>...</td>
+					        <td>...</td>
+					        <td>...</td>
+					        <td>...</td>
+				      	</tr> -->
+				     </tbody>
+				  </table>
+				</div>
+
+				<div class="panel panel-info">
+				  <div class="panel-heading">
+				 	<h3 class="panel-title">Add A Destination... <i>It's like magic</i></h3>
+				  </div>
+				  <div class="panel-body">
+				    <form>
+					  <div class="form-group">
+					    <label for="Train Name">Train Name</label>
+					    <input type="text" class="form-control" id="train-name" style="font-style: italic;" placeholder="Train">
+					  </div>
+					  <div class="form-group">
+					    <label for="Destination">Destination</label>
+					    <input type="text" class="form-control" id="destination" style="font-style: italic;" placeholder="Where are you headed?">
+					  </div>
+					  <div class="form-group">
+					    <label for="First Departure">First Departure 24-Hour Clock (HH:mm)</label>
+					    <input type="text" class="form-control" id="first-run" style="font-style: italic;" placeholder="First train leaves at? (Reference in Muggle 24-Hour Time)">
+					  </div>
+					  <div class="form-group">
+					    <label for="Start Date">Frequency</label>
+					    <input type="number" class="form-control" id="frequency" style="font-style: italic;" placeholder="How often does the train run? (Reference in Muggle Minutes)">
+					  </div>
+				<!-- 	  <div class="form-group">
+					    <label for="Monthly Rate">Next Arrival</label>
+					    <input type="number" class="form-control" id="next-arrival" placeholder="Train will arrive in... (Reference in Mugle Time)">
+					  </div> -->
+					  
+					  
+					  <button type="submit" class="btn btn-default" id="add-train">Submit</button>
+					</form>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-md-1"></div>
+
+		</div> <!-- CLOSES ROW -->
 	
-	<div class="panel panel-info">
-	  <!-- Default panel contents -->
-	  <div class="panel-heading">
-		<h3 class="panel-title">Current Train Schedule</h3>
-	  </div>
-	  <!-- Table -->
-	  <table class="table table-striped">
-	    <thead>
-	      <tr>
-	        <th>Train Name</th>
-	        <th>Destination</th>
-	        <th>First Departs At</th>
-	        <th>Frequency <i>(min)</i></th>
-	        <th>Next Arrival</th>
-	        <th>Arrival In... <!-- <br><span style="font-size: 10px; color: grey;"><i>(Muggle Minutes)</i></span> --></th>
-	      </tr>
-	    </thead>
+	</div> <!-- CLOSES CONTAINER -->
 
-	     <tbody id="entries">
-<!-- 		    <tr>
-		        <td>...</td>
-		        <td>...</td>
-		        <td>...</td>
-		        <td>...</td>
-		        <td>...</td>
-		        <td>...</td>
-	      	</tr> -->
-	     </tbody>
-	  </table>
-	</div>
-
-	<div class="panel panel-success">
-	  <div class="panel-heading">
-	 	<h3 class="panel-title">Add A Destination... <i>It's like magic</i></h3>
-	  </div>
-	  <div class="panel-body">
-	    <form>
-		  <div class="form-group">
-		    <label for="Train Name">Train Name</label>
-		    <input type="text" class="form-control" id="train-name" placeholder="Train">
-		  </div>
-		  <div class="form-group">
-		    <label for="Destination">Destination</label>
-		    <input type="text" class="form-control" id="destination" placeholder="Where are you headed?">
-		  </div>
-		  <div class="form-group">
-		    <label for="First Departure">First Departure 24-Hour Clock (HH:mm)</label>
-		    <input type="text" class="form-control" id="first-run" placeholder="First train leaves at? (Reference in Muggle 24-Hour Time)">
-		  </div>
-		  <div class="form-group">
-		    <label for="Start Date">Frequency</label>
-		    <input type="number" class="form-control" id="frequency" placeholder="How often does the train run? (Reference in Muggle Minutes)">
-		  </div>
-	<!-- 	  <div class="form-group">
-		    <label for="Monthly Rate">Next Arrival</label>
-		    <input type="number" class="form-control" id="next-arrival" placeholder="Train will arrive in... (Reference in Mugle Time)">
-		  </div> -->
-		  
-		  
-		  <button type="submit" class="btn btn-default" id="add-train">Submit</button>
-		</form>
-	  </div>
-	</div>
-
-
-	</div>
+				<!-- Footer -->
+			<nav class="navbar navbar-default navbar-static-bottom">
+		  		<div>
+		    		&#169; Copyright 2017 Ryan Stangle &nbsp;&nbsp; | &nbsp;&nbsp; Used for education purposes.<br>
+		    		HARRY POTTER, characters, names and related indicia are trademarks of and &#169; Warner Bros. Entertainment Inc.<br>
+		    		Harry Potter Publishing Rights &#169; JKR.  All rights reserved.
+		 		</div>
+			</nav>
 
 <script src="assets/javascript/app.js"></script>
 </body>
