@@ -109,9 +109,9 @@
       $("#entries").append("<tr><td>" + childSnapshot.val().name +
         "</td><td>" + childSnapshot.val().destination + 
         "</td><td>" + childSnapshot.val().firstDeparture +
-        "</td><td>" + childSnapshot.val().frequency + " minutes" +
+        "</td><td>" + childSnapshot.val().frequency + " min" +
         "</td><td>" + nextTrain.format("HH:mm") +  
-        "</td><td>" + tMinutesTillTrain + " minutes</td></tr>");
+        "</td><td>" + tMinutesTillTrain + " min</td></tr>");
 
       // NEED TO ATTACH AN ID TO THE tMinutesTillTrain BUT CAN'T FIGURE OUT HOW TO DO IT.
         // NEED TO USE .attr BUT CAN'T FIGURE OUT HOW.
