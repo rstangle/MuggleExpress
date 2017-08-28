@@ -33,6 +33,7 @@ body {
 	margin: 0px auto;
 	text-decoration: underline;
 	letter-spacing: 5px;
+	text-shadow: 3px 3px black;
 }
 
 .jumbotron > p {
@@ -59,6 +60,15 @@ body {
 	font-family: 'Milonga', cursive;
 	font-size: 18px;
 }
+
+.table>tbody>tr>td {
+	padding: 1% 2%;
+}
+
+/*th {
+	font-family: 'Stint Ultra Condensed', cursive;
+	font-size: 24px;
+}*/
 
 .navbar-static-bottom {
 	padding: 20px 20px 40px 20px;

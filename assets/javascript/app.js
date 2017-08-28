@@ -94,6 +94,7 @@
 
       // Minute Until Train
       var tMinutesTillTrain = childSnapshot.val().frequency - tRemainder;
+      $(tMinutesTillTrain).attr("id", "arrival-in"); //Didn't work... maybe because it has yet to be created on page at this point.
       console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
       // Next Train
@@ -104,17 +105,52 @@
 //***************************************************************************************************************************
 //***************************************************************************************************************************
 
-      // full list of items to the well
+      // full list of items to the panel
       $("#entries").append("<tr><td>" + childSnapshot.val().name +
         "</td><td>" + childSnapshot.val().destination + 
         "</td><td>" + childSnapshot.val().firstDeparture +
         "</td><td>" + childSnapshot.val().frequency + " minutes" +
-        "</td><td>" + nextTrain.format("HH:mm") + " (" + nextTrain.format("hh:mm a") + ")" + 
+        "</td><td>" + nextTrain.format("HH:mm") +  
         "</td><td>" + tMinutesTillTrain + " minutes</td></tr>");
+
+      // NEED TO ATTACH AN ID TO THE tMinutesTillTrain BUT CAN'T FIGURE OUT HOW TO DO IT.
+        // NEED TO USE .attr BUT CAN'T FIGURE OUT HOW.
+
+//**************************************************************************************************************************
+//**** FAILED ATTEMPT ******************************************************************************************************
+//**************************************************************************************************************************
+      // $("tMinutesTillTrain").attr("id", "arrival-in");
+
+      // function updateTime() {
+      //   $("#arrival-in").html(tMinutesTillTrain);
+      // };
+
+      // setInterval(function() {
+      //   updateTime();
+      // }, 60000);
+//**************************************************************************************************************************
+//**** FAILED ATTEMPT No. 2 ************************************************************************************************
+//**************************************************************************************************************************
+       // function updateTime() {
+       //  $("#entries").html("<tr><td>" + childSnapshot.val().name +
+       //  "</td><td>" + childSnapshot.val().destination + 
+       //  "</td><td>" + childSnapshot.val().firstDeparture +
+       //  "</td><td>" + childSnapshot.val().frequency + " minutes" +
+       //  "</td><td>" + nextTrain.format("HH:mm") +  
+       //  "</td><td>" + tMinutesTillTrain + " minutes</td></tr>");
+       // };
+
+       // setInterval(function() {
+       //  updateTime();
+       // }, 60000);
+
+//**************************************************************************************************************************
+//**************************************************************************************************************************
+//**************************************************************************************************************************
 
     // Handle the errors
     }, function(errorObject) {
       console.log("Errors handled: " + errorObject.code);
     });
 
-    
+

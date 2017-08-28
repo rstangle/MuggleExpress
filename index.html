@@ -42,7 +42,7 @@
 			<div class="col-md-10">
 				<div class="jumbotron">
 				  <h1>MUGGLE EXPRESS</h1>
-				  <p>A Muggle's Guide to the Hogwarts Express</p>
+				  <p>A Muggle's Guide to the Hogwarts Express Schedule</p>
 				 </div>
 			
 				<div class="panel panel-info">
@@ -56,7 +56,7 @@
 				      <tr>
 				        <th>Train Name</th>
 				        <th>Destination</th>
-				        <th>First Departs At</th>
+				        <th>First Departure</th>
 				        <th>Frequency</th>
 				        <th>Next Arrival</th>
 				        <th>Arrival In... <!-- <br><span style="font-size: 10px; color: grey;"><i>(Muggle Minutes)</i></span> --></th>
@@ -64,14 +64,14 @@
 				    </thead>
 
 				     <tbody id="entries">
-			<!-- 		    <tr>
-					        <td>...</td>
-					        <td>...</td>
-					        <td>...</td>
-					        <td>...</td>
-					        <td>...</td>
-					        <td>...</td>
-				      	</tr> -->
+					    <tr>
+<!-- 					        <td></td>
+					        <td></td>
+					        <td></td>
+					        <td></td>
+					        <td></td>
+					        <td id="arrival-in"></td> -->
+				      	</tr>
 				     </tbody>
 				  </table>
 				</div>
@@ -95,7 +95,7 @@
 					    <input type="text" class="form-control" id="first-run" style="font-style: italic;" placeholder="First train leaves at? (Reference in Muggle 24-Hour Time)">
 					  </div>
 					  <div class="form-group">
-					    <label for="Start Date">Frequency</label>
+					    <label for="Start Date">Frequency (Numbers Only)</label>
 					    <input type="number" class="form-control" id="frequency" style="font-style: italic;" placeholder="How often does the train run? (Reference in Muggle Minutes)">
 					  </div>
 				<!-- 	  <div class="form-group">
