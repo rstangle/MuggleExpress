@@ -80,7 +80,7 @@
 //***************************************************************************************************************************
 
       // First Departure Time (pushed back 1 year to make sure it comes before current time) --> From In-Class Activity. 
-      //Might try changing to 1-day if I can get this example to work.
+      //Might try changing to 7-days if I can get this example to work.
       var firstDepartureConverted = moment(childSnapshot.val().firstDeparture, "HH:mm").subtract(7, "days");
       console.log("Departure Converted: " + firstDepartureConverted);
 
